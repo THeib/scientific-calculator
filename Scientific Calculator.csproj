@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Dtafalonso-Android-Lollipop-Calculator.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Dtafalonso-Android-Lollipop-Calculator.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>9258F839952DA01266962C38EC85B02959574144</ManifestCertificateThumbprint>
@@ -82,17 +82,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Calculator.cs" />
-    <Compile Include="Classes\ConvertorBases.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="AppTier\Calculator.cs" />
+    <Compile Include="AppTier\ConvertorBases.cs" />
+    <Compile Include="DataTier\Logger.cs" />
+    <Compile Include="PreTier\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="PreTier\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="PreTier\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="PreTier\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -147,9 +148,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dtafalonso-Android-Lollipop-Calculator.ico" />
+    <Content Include="Resources\Dtafalonso-Android-Lollipop-Calculator.ico" />
     <None Include="Resources\sidebar_menu_80px.png" />
     <None Include="Resources\formula_fx_50px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

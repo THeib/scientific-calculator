@@ -21,13 +21,15 @@ namespace Scientific_Calculator
     {
         Standard, Baiscs, Scientific,
     }
+
+       
     enum Base
     {
 
-        Two = 2, 
-        Eight = 8,
-        Sixteen = 16,
-        Ten = 10
+        Two = 2,      //binary
+        Eight = 8,    // octal
+        Sixteen = 16, //hexadecimal
+        Ten = 10      // decimal
 
     }
     public partial class MainForm : Form
@@ -44,6 +46,8 @@ namespace Scientific_Calculator
 
         //Instantiating Calculator Class
         Calculator Calc = new Calculator();
+
+        Logger logger = new Logger();
 
         //Create default count of bracket button click is zero.
         int countOfBracket = 0;
@@ -148,6 +152,17 @@ namespace Scientific_Calculator
         //Method to Swap Values between Two text fields
         private void SwapValues()
         {
+            logger.addNewEntry(evaluationString + " = " + txtBoxResult.Text);
+            try
+            {
+            updateBasesValues(Convert.ToUInt32(txtBoxResult.Text));
+
+            }
+            catch (Exception)
+            {
+
+            }
+
             //Swap values in evaluation string as well
             evaluationString = txtBoxResult.Text;
             txtBoxExpression.Text = txtBoxResult.Text;
@@ -454,222 +469,7 @@ namespace Scientific_Calculator
                         evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
                         break;
 
-                    }
-                case 202://Cube root
-                    {
-                        startPosition = evaluationString.IndexOf("cbrt(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where cbrt( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.CubeRoot(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 210://SineInverse
-                    {
-                        startPosition = evaluationString.IndexOf("Asin(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where Asin( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.SineInverse(number), 2);
-                        //Check calculator is in degree mode or not
-                        if (isDegree) { result = Math.Round(Calc.RadianToDegree(result), 3); }
-
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-                    }
-                case 211://CosInverse
-                    {
-                        startPosition = evaluationString.IndexOf("Acos(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where Acos( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.CosInverse(number), 2);
-                        //Check calculator is in degree mode or not
-                        if (isDegree) { result = Math.Round(Calc.RadianToDegree(result), 3); }
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 212://TanInverse
-                    {
-                        startPosition = evaluationString.IndexOf("Atan(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where Atan( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.TanInverse(number), 2);
-                        //Check calculator is in degree mode or not
-                        if (isDegree) { result = Math.Round(Calc.RadianToDegree(result), 3); }
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 220://Sine Hyperbolic
-                    {
-                        startPosition = evaluationString.IndexOf("sinh(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where sinh( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.SineHyperbolic(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 221://Cos Hyperbolic
-                    {
-                        startPosition = evaluationString.IndexOf("cosh(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where cosh( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.CosHyperbolic(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 222://Tan Hyperbolic
-                    {
-                        startPosition = evaluationString.IndexOf("tanh(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where tanh( length is 5 so
-                        for (index = (startPosition + 5); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.TanHyperbolic(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 230://Inverse Sine Hyperbolic
-                    {
-                        startPosition = evaluationString.IndexOf("Asinh(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where Asinh( length is 6 so
-                        for (index = (startPosition + 6); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.InverseSineHyperbolic(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 231://Inverse Cos Hyperbolic
-                    {
-                        startPosition = evaluationString.IndexOf("Acosh(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where Acosh( length is 6 so
-                        for (index = (startPosition + 6); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.InverseCosHyperbolic(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 232://Inverse Tan Hyperbolic
-                    {
-                        startPosition = evaluationString.IndexOf("Atanh(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where Atanh( length is 6 so
-                        for (index = (startPosition + 6); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.InverseTanHyperbolic(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
-                case 240://2^
-                    {
-                        startPosition = evaluationString.IndexOf("2^(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where 2^( length is 3 so
-                        for (index = (startPosition + 3); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = double.Parse(parsedNumber);
-                        //Round result
-                        result = Math.Round(Calc.PowerOf2(number), 2);
-                        //Than replaces in evaluationString
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
+                    }              
                 //Same process on three cases so
                 case 131:
                 case 132:
@@ -701,25 +501,7 @@ namespace Scientific_Calculator
 
                         break;
                     }
-                case 242://Factorial
-                    {
-                        startPosition = evaluationString.IndexOf("facto(");
-                        endPosition = evaluationString.IndexOf(')', startPosition);
-                        //Where ( length is 6 so
-                        for (index = (startPosition + 6); index < endPosition; index++)
-                        {
-                            //Getting Number lies inside Bracket
-                            parsedNumber += evaluationString[index];
-                        }
-                        //Parsing into float
-                        number = Math.Abs(double.Parse(parsedNumber));
-                        //Round result
-                        result = Calc.Factorial(number);
-                        //Than replaces in txBoxExpression
-                        evaluationString = evaluationString.Remove(startPosition, (endPosition - startPosition + 1)).Insert(startPosition, result.ToString());
-                        break;
-
-                    }
+                
                 //On Default Case do nothing 
 
                 default: { break; }
@@ -748,11 +530,11 @@ namespace Scientific_Calculator
             string templateString = "", command = Text;
             //Checking command Text to perform operation
             if (Text == "√") { command = "sqrt"; }
-            if (Text == "3√x") { command = "cbrt"; }
             if (Text == "e^x") { command = "e^"; }
             if (Text == "|x|") { command = "abs"; }
+            if (Text == "x^2") { command = "x^"; }
             if (Text == "2^x") { command = "2^"; }
-            if (Text == "x!") { command = "facto"; }
+
 
             //To save the status of currently which button is clicked
             currentCommand = command;
@@ -790,10 +572,12 @@ namespace Scientific_Calculator
                 if (txtBoxExpression.Text.Length == 0 || regex.IsMatch(txtBoxExpression.Text))
                 {
                     UpdateExpression(Calc.PI().ToString());
+                  
                 }
+
                 else
                 {
-                    UpdateExpression("*" + Calc.PI().ToString());
+                    UpdateExpression(Calc.PI().ToString());
 
                 }
             }
@@ -984,10 +768,7 @@ namespace Scientific_Calculator
 
         }
 
-        private void myToolTip_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
+       
 
         private void scientificClick(object sender, EventArgs e)
         {
@@ -1000,24 +781,31 @@ namespace Scientific_Calculator
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             this.siepanel.Visible = false;
+            this.panelSoft.Visible = false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             this.siepanel.Visible = false;
+            this.panelSoft.Visible = true;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             this.siepanel.Visible = true;
+            this.panelSoft.Visible = false;
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+      
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxResult_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
 }
-
-//Pramesh Karki
