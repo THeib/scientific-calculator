@@ -1079,7 +1079,7 @@ namespace Scientific_Calculator
             this.verticalTransition.SetDecoration(this.buttonHistory, Guna.UI2.AnimatorNS.DecorationType.None);
             this.buttonHistory.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHistory.ForeColor = System.Drawing.Color.Crimson;
-            this.buttonHistory.Location = new System.Drawing.Point(446, 231);
+            this.buttonHistory.Location = new System.Drawing.Point(446, 230);
             this.buttonHistory.Name = "buttonHistory";
             this.buttonHistory.Size = new System.Drawing.Size(89, 29);
             this.buttonHistory.TabIndex = 18;

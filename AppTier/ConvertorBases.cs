@@ -4,10 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Scientific_Calculator.Classes
+namespace Scientific_Calculator.AppTier
 {
     public class BaseConverter
     {
+
+        public static string ToHex( int value)
+        {
+            return String.Format("0x{0:X}", value);
+        }
+
+
 
         public static string ToBase(string number, int start_base, int target_base)
         {

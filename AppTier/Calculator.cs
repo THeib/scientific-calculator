@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Scientific_Calculator.Classes
+namespace Scientific_Calculator.AppTier
 {
    public class Calculator
     {
@@ -90,5 +90,6 @@ namespace Scientific_Calculator.Classes
        
       
     }
+
 
 }
