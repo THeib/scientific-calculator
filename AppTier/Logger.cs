@@ -1,32 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
+using Scientific_Calculator.interfaces;
 using Scientific_Calculator.DataTier;
-
-
 namespace Scientific_Calculator.AppTier
 {
-    public class Logger
+    internal class Logger : ILogger
     {
+        private ILoggerState loggerState;
 
-        public void addNewEntry(string log)
+        private static Logger instance = null;
+
+        private Logger()
+        {
+            loggerState = new LoggerState();
+
+        }
+
+
+        public static Logger Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Logger();
+                }
+                return instance;
+            }
+        }
+        
+
+
+        public ILoggerState getLogs()
+        {
+
+            return loggerState;
+
+        }
+
+        public void addNewlog(string log)
         {
             DateTime now = DateTime.Now;
-            LoggerState.entities.Add(now + " : " + log);
-        }
+            loggerState.addNewEntry(now + " > " +  log);
 
-        public override string ToString()
-        {
-            var strings = from object o in LoggerState.entities
-                          select o.ToString();
-            return string.Join("\n", strings.ToArray());
         }
-
     }
 
-
 }
-

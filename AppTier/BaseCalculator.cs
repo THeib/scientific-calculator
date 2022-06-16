@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Scientific_Calculator.interfaces;
 
 namespace Scientific_Calculator.AppTier
 {
-   public class Calculator
+   public class BaseCalculator: IBaseCalculator
     {
       
         //Square Root
@@ -15,7 +12,7 @@ namespace Scientific_Calculator.AppTier
             return Math.Pow(Num,(double) 1 / 2);
             
         }
-            
+
         //Tan
         public double Tan(double Num)
         {
@@ -62,12 +59,12 @@ namespace Scientific_Calculator.AppTier
             return Math.E;
         }
         //PowerOf2
-        public Double PowerOf2(double Num)
+        public double PowerOf2(double Num)
         {
             return Math.Pow(2, Num);
         }
         //Power
-        public Double Power(double Num,Double power)
+        public double Power(double Num,Double power)
         {
             return Math.Pow(Num, power);
         }
@@ -87,8 +84,8 @@ namespace Scientific_Calculator.AppTier
         {
             return Math.Round(num , digit , MidpointRounding.AwayFromZero);
         }
-       
-      
+     
+
     }
 
 

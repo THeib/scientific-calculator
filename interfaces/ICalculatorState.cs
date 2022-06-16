@@ -1,15 +1,11 @@
 ﻿
-using Scientific_Calculator.interfaces;
 
-namespace Scientific_Calculator.DataTier
+namespace Scientific_Calculator.interfaces
 {
-
-     public class CalculatorState : ICalculatorState
+    internal interface ICalculatorState
     {
 
-
-
-        public string CurrentCommand
+        string CurrentCommand
         {
             get;
             set;
@@ -17,7 +13,7 @@ namespace Scientific_Calculator.DataTier
 
 
 
-        public string CurrentBtnIndex
+        string CurrentBtnIndex
         {
             get;
             set;
@@ -25,36 +21,36 @@ namespace Scientific_Calculator.DataTier
 
 
 
-      public  bool IsDegree
+        bool IsDegree
         {
             get;
             set;
         }
 
-       public  string Expression
+        string Expression
         {
             get;
             set;
         }
-       public string Result
-        {
-            get;
-            set;
-        }
-
-        public string EvaluationString
+        string Result
         {
             get;
             set;
         }
 
-        public int CountOfBracket
+         string EvaluationString
         {
             get;
             set;
         }
 
 
+
+         int CountOfBracket
+        {
+            get;
+            set;
+        }
 
     }
 }

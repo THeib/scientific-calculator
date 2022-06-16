@@ -1,13 +1,38 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections;
+using Scientific_Calculator.interfaces;
+
 namespace Scientific_Calculator.DataTier
 {
-    public  class LoggerState
+    public  class LoggerState: ILoggerState
     {
-        public static ArrayList entities = new ArrayList();
+        private  List<string> entries;
+       public  LoggerState()
+        {
+
+            entries = new List<string>();
+
+        }
+
+        public List<string> getEntries()
+        {
+            return entries;
+
+        }
+
+        public void addNewEntry(string value)
+        {
+
+            entries.Add(value);
+        }
+
+        public override string ToString()
+        {
+            var strings = from object o in entries
+                          select o.ToString();
+            return string.Join("\n", strings.ToArray());
+        }
+
     }
 }

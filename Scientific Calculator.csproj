@@ -82,11 +82,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppTier\Calculator.cs" />
+    <Compile Include="AppTier\BaseCalculator.cs" />
+    <Compile Include="AppTier\CalculatorWithHistory.cs" />
     <Compile Include="AppTier\ConvertorBases.cs" />
     <Compile Include="AppTier\Logger.cs" />
     <Compile Include="DataTier\CalculatorState.cs" />
     <Compile Include="DataTier\LoggerState.cs" />
+    <Compile Include="interfaces\IBaseCalculator.cs" />
+    <Compile Include="interfaces\ICalculatorState.cs" />
+    <Compile Include="interfaces\ICalculatorWithHistory.cs" />
+    <Compile Include="interfaces\ILogger.cs" />
+    <Compile Include="interfaces\ILoggerState.cs" />
     <Compile Include="PreTier\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

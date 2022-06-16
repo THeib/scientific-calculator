@@ -99,12 +99,20 @@ namespace Scientific_Calculator
             this.label4 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonHistory = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rbHexaDecimalBase = new System.Windows.Forms.RadioButton();
+            this.rbOctalBase = new System.Windows.Forms.RadioButton();
+            this.rbBinaryBase = new System.Windows.Forms.RadioButton();
+            this.rbDecimalBase = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.verticalTransition = new Guna.UI2.WinForms.Guna2Transition();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackSpace)).BeginInit();
             this.siepanel.SuspendLayout();
             this.panelSoft.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBoxExpression
@@ -124,14 +132,14 @@ namespace Scientific_Calculator
             this.txtBoxExpression.Font = new System.Drawing.Font("Segoe UI Symbol", 15F, System.Drawing.FontStyle.Bold);
             this.txtBoxExpression.ForeColor = System.Drawing.Color.White;
             this.txtBoxExpression.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.txtBoxExpression.Location = new System.Drawing.Point(212, 40);
-            this.txtBoxExpression.Margin = new System.Windows.Forms.Padding(12);
+            this.txtBoxExpression.Location = new System.Drawing.Point(483, 39);
+            this.txtBoxExpression.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtBoxExpression.Name = "txtBoxExpression";
             this.txtBoxExpression.PasswordChar = '\0';
             this.txtBoxExpression.PlaceholderText = "";
             this.txtBoxExpression.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBoxExpression.SelectedText = "";
-            this.txtBoxExpression.Size = new System.Drawing.Size(521, 89);
+            this.txtBoxExpression.Size = new System.Drawing.Size(429, 89);
             this.txtBoxExpression.TabIndex = 0;
             this.txtBoxExpression.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBoxExpression.TextChanged += new System.EventHandler(this.txtBoxExpression_TextChanged);
@@ -145,10 +153,10 @@ namespace Scientific_Calculator
             this.btnDivide.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnDivide.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnDivide.ForeColor = System.Drawing.Color.White;
-            this.btnDivide.Location = new System.Drawing.Point(643, 274);
-            this.btnDivide.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDivide.Location = new System.Drawing.Point(803, 274);
+            this.btnDivide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDivide.Name = "btnDivide";
-            this.btnDivide.Size = new System.Drawing.Size(90, 70);
+            this.btnDivide.Size = new System.Drawing.Size(91, 70);
             this.btnDivide.TabIndex = 2;
             this.btnDivide.Text = "/";
             this.btnDivide.Click += new System.EventHandler(this.HandleClick);
@@ -161,10 +169,10 @@ namespace Scientific_Calculator
             this.btnMultiplication.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnMultiplication.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnMultiplication.ForeColor = System.Drawing.Color.White;
-            this.btnMultiplication.Location = new System.Drawing.Point(643, 352);
-            this.btnMultiplication.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMultiplication.Location = new System.Drawing.Point(803, 352);
+            this.btnMultiplication.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMultiplication.Name = "btnMultiplication";
-            this.btnMultiplication.Size = new System.Drawing.Size(90, 70);
+            this.btnMultiplication.Size = new System.Drawing.Size(91, 70);
             this.btnMultiplication.TabIndex = 2;
             this.btnMultiplication.Text = "*";
             this.btnMultiplication.Click += new System.EventHandler(this.HandleClick);
@@ -177,10 +185,10 @@ namespace Scientific_Calculator
             this.btnSubtraction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnSubtraction.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnSubtraction.ForeColor = System.Drawing.Color.White;
-            this.btnSubtraction.Location = new System.Drawing.Point(643, 430);
-            this.btnSubtraction.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSubtraction.Location = new System.Drawing.Point(803, 430);
+            this.btnSubtraction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSubtraction.Name = "btnSubtraction";
-            this.btnSubtraction.Size = new System.Drawing.Size(90, 70);
+            this.btnSubtraction.Size = new System.Drawing.Size(91, 70);
             this.btnSubtraction.TabIndex = 2;
             this.btnSubtraction.Text = "-";
             this.btnSubtraction.Click += new System.EventHandler(this.HandleClick);
@@ -193,10 +201,10 @@ namespace Scientific_Calculator
             this.btnEquals.FillColor = System.Drawing.Color.Green;
             this.btnEquals.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnEquals.ForeColor = System.Drawing.Color.White;
-            this.btnEquals.Location = new System.Drawing.Point(643, 586);
-            this.btnEquals.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEquals.Location = new System.Drawing.Point(803, 586);
+            this.btnEquals.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEquals.Name = "btnEquals";
-            this.btnEquals.Size = new System.Drawing.Size(90, 70);
+            this.btnEquals.Size = new System.Drawing.Size(91, 70);
             this.btnEquals.TabIndex = 2;
             this.btnEquals.Text = "=";
             this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
@@ -209,10 +217,10 @@ namespace Scientific_Calculator
             this.btnAddition.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnAddition.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnAddition.ForeColor = System.Drawing.Color.White;
-            this.btnAddition.Location = new System.Drawing.Point(643, 508);
-            this.btnAddition.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddition.Location = new System.Drawing.Point(803, 508);
+            this.btnAddition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddition.Name = "btnAddition";
-            this.btnAddition.Size = new System.Drawing.Size(90, 70);
+            this.btnAddition.Size = new System.Drawing.Size(91, 70);
             this.btnAddition.TabIndex = 2;
             this.btnAddition.Text = "+";
             this.btnAddition.Click += new System.EventHandler(this.HandleClick);
@@ -225,10 +233,10 @@ namespace Scientific_Calculator
             this.btnModuloDivison.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnModuloDivison.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnModuloDivison.ForeColor = System.Drawing.Color.White;
-            this.btnModuloDivison.Location = new System.Drawing.Point(543, 274);
-            this.btnModuloDivison.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModuloDivison.Location = new System.Drawing.Point(703, 274);
+            this.btnModuloDivison.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModuloDivison.Name = "btnModuloDivison";
-            this.btnModuloDivison.Size = new System.Drawing.Size(90, 70);
+            this.btnModuloDivison.Size = new System.Drawing.Size(91, 70);
             this.btnModuloDivison.TabIndex = 2;
             this.btnModuloDivison.Text = "%";
             this.myToolTip.SetToolTip(this.btnModuloDivison, "Modular Divison");
@@ -242,10 +250,10 @@ namespace Scientific_Calculator
             this.btn9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn9.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn9.ForeColor = System.Drawing.Color.White;
-            this.btn9.Location = new System.Drawing.Point(543, 352);
-            this.btn9.Margin = new System.Windows.Forms.Padding(4);
+            this.btn9.Location = new System.Drawing.Point(703, 352);
+            this.btn9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(90, 70);
+            this.btn9.Size = new System.Drawing.Size(91, 70);
             this.btn9.TabIndex = 2;
             this.btn9.Text = "9";
             this.btn9.Click += new System.EventHandler(this.HandleClick);
@@ -258,10 +266,10 @@ namespace Scientific_Calculator
             this.btn6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn6.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn6.ForeColor = System.Drawing.Color.White;
-            this.btn6.Location = new System.Drawing.Point(543, 430);
-            this.btn6.Margin = new System.Windows.Forms.Padding(4);
+            this.btn6.Location = new System.Drawing.Point(703, 430);
+            this.btn6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(90, 70);
+            this.btn6.Size = new System.Drawing.Size(91, 70);
             this.btn6.TabIndex = 2;
             this.btn6.Text = "6";
             this.btn6.Click += new System.EventHandler(this.HandleClick);
@@ -274,10 +282,10 @@ namespace Scientific_Calculator
             this.btnDecimal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btnDecimal.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnDecimal.ForeColor = System.Drawing.Color.White;
-            this.btnDecimal.Location = new System.Drawing.Point(543, 586);
-            this.btnDecimal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDecimal.Location = new System.Drawing.Point(703, 586);
+            this.btnDecimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDecimal.Name = "btnDecimal";
-            this.btnDecimal.Size = new System.Drawing.Size(90, 70);
+            this.btnDecimal.Size = new System.Drawing.Size(91, 70);
             this.btnDecimal.TabIndex = 2;
             this.btnDecimal.Text = ".";
             this.btnDecimal.Click += new System.EventHandler(this.HandleClick);
@@ -290,10 +298,10 @@ namespace Scientific_Calculator
             this.btn3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn3.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn3.ForeColor = System.Drawing.Color.White;
-            this.btn3.Location = new System.Drawing.Point(543, 508);
-            this.btn3.Margin = new System.Windows.Forms.Padding(4);
+            this.btn3.Location = new System.Drawing.Point(703, 508);
+            this.btn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(90, 70);
+            this.btn3.Size = new System.Drawing.Size(91, 70);
             this.btn3.TabIndex = 2;
             this.btn3.Text = "3";
             this.btn3.Click += new System.EventHandler(this.HandleClick);
@@ -306,10 +314,10 @@ namespace Scientific_Calculator
             this.btnBrackets.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnBrackets.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnBrackets.ForeColor = System.Drawing.Color.White;
-            this.btnBrackets.Location = new System.Drawing.Point(445, 274);
-            this.btnBrackets.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBrackets.Location = new System.Drawing.Point(605, 274);
+            this.btnBrackets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBrackets.Name = "btnBrackets";
-            this.btnBrackets.Size = new System.Drawing.Size(90, 70);
+            this.btnBrackets.Size = new System.Drawing.Size(91, 70);
             this.btnBrackets.TabIndex = 2;
             this.btnBrackets.Text = "( )";
             this.btnBrackets.Click += new System.EventHandler(this.btnBrackets_Click);
@@ -322,10 +330,10 @@ namespace Scientific_Calculator
             this.btn8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn8.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn8.ForeColor = System.Drawing.Color.White;
-            this.btn8.Location = new System.Drawing.Point(445, 352);
-            this.btn8.Margin = new System.Windows.Forms.Padding(4);
+            this.btn8.Location = new System.Drawing.Point(605, 352);
+            this.btn8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(90, 70);
+            this.btn8.Size = new System.Drawing.Size(91, 70);
             this.btn8.TabIndex = 2;
             this.btn8.Text = "8";
             this.btn8.Click += new System.EventHandler(this.HandleClick);
@@ -338,10 +346,10 @@ namespace Scientific_Calculator
             this.btn5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn5.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn5.ForeColor = System.Drawing.Color.White;
-            this.btn5.Location = new System.Drawing.Point(445, 430);
-            this.btn5.Margin = new System.Windows.Forms.Padding(4);
+            this.btn5.Location = new System.Drawing.Point(605, 430);
+            this.btn5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(90, 70);
+            this.btn5.Size = new System.Drawing.Size(91, 70);
             this.btn5.TabIndex = 2;
             this.btn5.Text = "5";
             this.btn5.Click += new System.EventHandler(this.HandleClick);
@@ -354,10 +362,10 @@ namespace Scientific_Calculator
             this.btn0.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn0.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn0.ForeColor = System.Drawing.Color.White;
-            this.btn0.Location = new System.Drawing.Point(446, 586);
-            this.btn0.Margin = new System.Windows.Forms.Padding(4);
+            this.btn0.Location = new System.Drawing.Point(605, 586);
+            this.btn0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(90, 70);
+            this.btn0.Size = new System.Drawing.Size(91, 70);
             this.btn0.TabIndex = 2;
             this.btn0.Text = "0";
             this.btn0.Click += new System.EventHandler(this.HandleClick);
@@ -370,10 +378,10 @@ namespace Scientific_Calculator
             this.btn2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn2.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn2.ForeColor = System.Drawing.Color.White;
-            this.btn2.Location = new System.Drawing.Point(446, 508);
-            this.btn2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn2.Location = new System.Drawing.Point(605, 508);
+            this.btn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(90, 70);
+            this.btn2.Size = new System.Drawing.Size(91, 70);
             this.btn2.TabIndex = 2;
             this.btn2.Text = "2";
             this.btn2.Click += new System.EventHandler(this.HandleClick);
@@ -386,10 +394,10 @@ namespace Scientific_Calculator
             this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnClear.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(348, 274);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(508, 274);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(90, 70);
+            this.btnClear.Size = new System.Drawing.Size(91, 70);
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = "C";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -402,10 +410,10 @@ namespace Scientific_Calculator
             this.btn7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn7.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn7.ForeColor = System.Drawing.Color.White;
-            this.btn7.Location = new System.Drawing.Point(348, 352);
-            this.btn7.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7.Location = new System.Drawing.Point(508, 352);
+            this.btn7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(90, 70);
+            this.btn7.Size = new System.Drawing.Size(91, 70);
             this.btn7.TabIndex = 2;
             this.btn7.Text = "7";
             this.btn7.Click += new System.EventHandler(this.HandleClick);
@@ -418,10 +426,10 @@ namespace Scientific_Calculator
             this.btn4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn4.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn4.ForeColor = System.Drawing.Color.White;
-            this.btn4.Location = new System.Drawing.Point(348, 430);
-            this.btn4.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4.Location = new System.Drawing.Point(508, 430);
+            this.btn4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(90, 70);
+            this.btn4.Size = new System.Drawing.Size(91, 70);
             this.btn4.TabIndex = 2;
             this.btn4.Text = "4";
             this.btn4.Click += new System.EventHandler(this.HandleClick);
@@ -434,10 +442,10 @@ namespace Scientific_Calculator
             this.btnChangeSign.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btnChangeSign.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btnChangeSign.ForeColor = System.Drawing.Color.White;
-            this.btnChangeSign.Location = new System.Drawing.Point(348, 586);
-            this.btnChangeSign.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangeSign.Location = new System.Drawing.Point(508, 586);
+            this.btnChangeSign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangeSign.Name = "btnChangeSign";
-            this.btnChangeSign.Size = new System.Drawing.Size(90, 70);
+            this.btnChangeSign.Size = new System.Drawing.Size(91, 70);
             this.btnChangeSign.TabIndex = 2;
             this.btnChangeSign.Text = "(-";
             this.btnChangeSign.Click += new System.EventHandler(this.btnChangeSign_Click);
@@ -450,10 +458,10 @@ namespace Scientific_Calculator
             this.btn1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(45)))));
             this.btn1.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(348, 508);
-            this.btn1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn1.Location = new System.Drawing.Point(508, 508);
+            this.btn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(90, 70);
+            this.btn1.Size = new System.Drawing.Size(91, 70);
             this.btn1.TabIndex = 2;
             this.btn1.Text = "1";
             this.btn1.Click += new System.EventHandler(this.HandleClick);
@@ -466,10 +474,10 @@ namespace Scientific_Calculator
             this.btn22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn22.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn22.ForeColor = System.Drawing.Color.White;
-            this.btn22.Location = new System.Drawing.Point(210, 175);
-            this.btn22.Margin = new System.Windows.Forms.Padding(4);
+            this.btn22.Location = new System.Drawing.Point(211, 175);
+            this.btn22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn22.Name = "btn22";
-            this.btn22.Size = new System.Drawing.Size(90, 70);
+            this.btn22.Size = new System.Drawing.Size(91, 70);
             this.btn22.TabIndex = 2;
             this.btn22.Text = "1/x";
             this.btn22.Click += new System.EventHandler(this.btn22_Click);
@@ -482,10 +490,10 @@ namespace Scientific_Calculator
             this.btn42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn42.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn42.ForeColor = System.Drawing.Color.White;
-            this.btn42.Location = new System.Drawing.Point(210, 331);
-            this.btn42.Margin = new System.Windows.Forms.Padding(4);
+            this.btn42.Location = new System.Drawing.Point(211, 331);
+            this.btn42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn42.Name = "btn42";
-            this.btn42.Size = new System.Drawing.Size(90, 70);
+            this.btn42.Size = new System.Drawing.Size(91, 70);
             this.btn42.TabIndex = 2;
             this.btn42.Text = "e";
             this.btn42.Click += new System.EventHandler(this.btn42_Click);
@@ -498,10 +506,10 @@ namespace Scientific_Calculator
             this.btn32.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn32.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn32.ForeColor = System.Drawing.Color.White;
-            this.btn32.Location = new System.Drawing.Point(210, 253);
-            this.btn32.Margin = new System.Windows.Forms.Padding(4);
+            this.btn32.Location = new System.Drawing.Point(211, 254);
+            this.btn32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn32.Name = "btn32";
-            this.btn32.Size = new System.Drawing.Size(90, 70);
+            this.btn32.Size = new System.Drawing.Size(91, 70);
             this.btn32.TabIndex = 2;
             this.btn32.Text = "x^y";
             this.btn32.Click += new System.EventHandler(this.PowerFunction_Clicked);
@@ -514,10 +522,10 @@ namespace Scientific_Calculator
             this.btn20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn20.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn20.ForeColor = System.Drawing.Color.White;
-            this.btn20.Location = new System.Drawing.Point(14, 177);
-            this.btn20.Margin = new System.Windows.Forms.Padding(4);
+            this.btn20.Location = new System.Drawing.Point(13, 177);
+            this.btn20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn20.Name = "btn20";
-            this.btn20.Size = new System.Drawing.Size(90, 70);
+            this.btn20.Size = new System.Drawing.Size(91, 70);
             this.btn20.TabIndex = 2;
             this.btn20.Text = "ln";
             this.btn20.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -530,10 +538,10 @@ namespace Scientific_Calculator
             this.btn40.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn40.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn40.ForeColor = System.Drawing.Color.White;
-            this.btn40.Location = new System.Drawing.Point(14, 331);
-            this.btn40.Margin = new System.Windows.Forms.Padding(4);
+            this.btn40.Location = new System.Drawing.Point(13, 331);
+            this.btn40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn40.Name = "btn40";
-            this.btn40.Size = new System.Drawing.Size(90, 70);
+            this.btn40.Size = new System.Drawing.Size(91, 70);
             this.btn40.TabIndex = 2;
             this.btn40.Text = "|x|";
             this.btn40.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -546,10 +554,10 @@ namespace Scientific_Calculator
             this.btn30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn30.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn30.ForeColor = System.Drawing.Color.White;
-            this.btn30.Location = new System.Drawing.Point(14, 255);
-            this.btn30.Margin = new System.Windows.Forms.Padding(4);
+            this.btn30.Location = new System.Drawing.Point(13, 255);
+            this.btn30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn30.Name = "btn30";
-            this.btn30.Size = new System.Drawing.Size(90, 70);
+            this.btn30.Size = new System.Drawing.Size(91, 70);
             this.btn30.TabIndex = 2;
             this.btn30.Text = "e^x";
             this.btn30.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -570,14 +578,14 @@ namespace Scientific_Calculator
             this.txtBoxResult.Font = new System.Drawing.Font("Segoe UI Symbol", 17F, System.Drawing.FontStyle.Bold);
             this.txtBoxResult.ForeColor = System.Drawing.Color.White;
             this.txtBoxResult.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.txtBoxResult.Location = new System.Drawing.Point(212, 140);
-            this.txtBoxResult.Margin = new System.Windows.Forms.Padding(12);
+            this.txtBoxResult.Location = new System.Drawing.Point(483, 140);
+            this.txtBoxResult.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtBoxResult.Name = "txtBoxResult";
             this.txtBoxResult.PasswordChar = '\0';
             this.txtBoxResult.PlaceholderText = "";
             this.txtBoxResult.ReadOnly = true;
             this.txtBoxResult.SelectedText = "";
-            this.txtBoxResult.Size = new System.Drawing.Size(521, 76);
+            this.txtBoxResult.Size = new System.Drawing.Size(429, 76);
             this.txtBoxResult.TabIndex = 0;
             this.txtBoxResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBoxResult.TextChanged += new System.EventHandler(this.txtBoxResult_TextChanged);
@@ -591,9 +599,9 @@ namespace Scientific_Calculator
             this.btn21.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn21.ForeColor = System.Drawing.Color.White;
             this.btn21.Location = new System.Drawing.Point(112, 177);
-            this.btn21.Margin = new System.Windows.Forms.Padding(4);
+            this.btn21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn21.Name = "btn21";
-            this.btn21.Size = new System.Drawing.Size(90, 70);
+            this.btn21.Size = new System.Drawing.Size(91, 70);
             this.btn21.TabIndex = 2;
             this.btn21.Text = "log";
             this.btn21.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -607,9 +615,9 @@ namespace Scientific_Calculator
             this.btn41.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn41.ForeColor = System.Drawing.Color.White;
             this.btn41.Location = new System.Drawing.Point(112, 331);
-            this.btn41.Margin = new System.Windows.Forms.Padding(4);
+            this.btn41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn41.Name = "btn41";
-            this.btn41.Size = new System.Drawing.Size(90, 70);
+            this.btn41.Size = new System.Drawing.Size(91, 70);
             this.btn41.TabIndex = 2;
             this.btn41.Text = "PI";
             this.btn41.Click += new System.EventHandler(this.btn41_Click);
@@ -622,10 +630,10 @@ namespace Scientific_Calculator
             this.btn31.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn31.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn31.ForeColor = System.Drawing.Color.White;
-            this.btn31.Location = new System.Drawing.Point(112, 253);
-            this.btn31.Margin = new System.Windows.Forms.Padding(4);
+            this.btn31.Location = new System.Drawing.Point(112, 254);
+            this.btn31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn31.Name = "btn31";
-            this.btn31.Size = new System.Drawing.Size(90, 70);
+            this.btn31.Size = new System.Drawing.Size(91, 70);
             this.btn31.TabIndex = 2;
             this.btn31.Text = "x^2";
             this.btn31.Click += new System.EventHandler(this.PowerFunction_Clicked);
@@ -677,7 +685,7 @@ namespace Scientific_Calculator
             this.guna2Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.Location = new System.Drawing.Point(7, 290);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(251, 42);
             this.guna2Button5.TabIndex = 2;
@@ -694,7 +702,7 @@ namespace Scientific_Calculator
             this.guna2Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.Location = new System.Drawing.Point(7, 241);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(251, 42);
             this.guna2Button6.TabIndex = 2;
@@ -711,7 +719,7 @@ namespace Scientific_Calculator
             this.guna2Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.Location = new System.Drawing.Point(7, 191);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(251, 42);
             this.guna2Button7.TabIndex = 2;
@@ -729,8 +737,8 @@ namespace Scientific_Calculator
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(680, 10);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Location = new System.Drawing.Point(859, 10);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(33, 31);
             this.btnMinimize.TabIndex = 2;
@@ -747,8 +755,8 @@ namespace Scientific_Calculator
             this.btnClose.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(735, 10);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(913, 10);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(33, 31);
             this.btnClose.TabIndex = 2;
@@ -760,7 +768,7 @@ namespace Scientific_Calculator
             this.transition.SetDecoration(this.btnBackSpace, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verticalTransition.SetDecoration(this.btnBackSpace, Guna.UI2.AnimatorNS.DecorationType.None);
             this.btnBackSpace.Image = ((System.Drawing.Image)(resources.GetObject("btnBackSpace.Image")));
-            this.btnBackSpace.Location = new System.Drawing.Point(377, 230);
+            this.btnBackSpace.Location = new System.Drawing.Point(532, 231);
             this.btnBackSpace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBackSpace.Name = "btnBackSpace";
             this.btnBackSpace.Size = new System.Drawing.Size(40, 30);
@@ -808,7 +816,7 @@ namespace Scientific_Calculator
             this.siepanel.Controls.Add(this.btn20);
             this.verticalTransition.SetDecoration(this.siepanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.transition.SetDecoration(this.siepanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.siepanel.Location = new System.Drawing.Point(40, 255);
+            this.siepanel.Location = new System.Drawing.Point(200, 255);
             this.siepanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.siepanel.Name = "siepanel";
             this.siepanel.Size = new System.Drawing.Size(309, 410);
@@ -822,10 +830,10 @@ namespace Scientific_Calculator
             this.btn10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn10.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn10.ForeColor = System.Drawing.Color.White;
-            this.btn10.Location = new System.Drawing.Point(14, 97);
-            this.btn10.Margin = new System.Windows.Forms.Padding(4);
+            this.btn10.Location = new System.Drawing.Point(13, 97);
+            this.btn10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn10.Name = "btn10";
-            this.btn10.Size = new System.Drawing.Size(90, 70);
+            this.btn10.Size = new System.Drawing.Size(91, 70);
             this.btn10.TabIndex = 6;
             this.btn10.Text = "sin";
             this.btn10.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -839,9 +847,9 @@ namespace Scientific_Calculator
             this.btn11.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn11.ForeColor = System.Drawing.Color.White;
             this.btn11.Location = new System.Drawing.Point(112, 97);
-            this.btn11.Margin = new System.Windows.Forms.Padding(4);
+            this.btn11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn11.Name = "btn11";
-            this.btn11.Size = new System.Drawing.Size(90, 70);
+            this.btn11.Size = new System.Drawing.Size(91, 70);
             this.btn11.TabIndex = 7;
             this.btn11.Text = "cos";
             this.btn11.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -854,10 +862,10 @@ namespace Scientific_Calculator
             this.btn12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn12.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn12.ForeColor = System.Drawing.Color.White;
-            this.btn12.Location = new System.Drawing.Point(210, 97);
-            this.btn12.Margin = new System.Windows.Forms.Padding(4);
+            this.btn12.Location = new System.Drawing.Point(211, 97);
+            this.btn12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn12.Name = "btn12";
-            this.btn12.Size = new System.Drawing.Size(90, 70);
+            this.btn12.Size = new System.Drawing.Size(91, 70);
             this.btn12.TabIndex = 8;
             this.btn12.Text = "tan";
             this.btn12.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -873,8 +881,8 @@ namespace Scientific_Calculator
             this.btn01.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn01.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn01.ForeColor = System.Drawing.Color.White;
-            this.btn01.Location = new System.Drawing.Point(10, 19);
-            this.btn01.Margin = new System.Windows.Forms.Padding(4);
+            this.btn01.Location = new System.Drawing.Point(11, 18);
+            this.btn01.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn01.Name = "btn01";
             this.btn01.Size = new System.Drawing.Size(192, 73);
             this.btn01.TabIndex = 4;
@@ -890,10 +898,10 @@ namespace Scientific_Calculator
             this.btn02.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.btn02.Font = new System.Drawing.Font("Segoe UI Symbol", 14F, System.Drawing.FontStyle.Bold);
             this.btn02.ForeColor = System.Drawing.Color.White;
-            this.btn02.Location = new System.Drawing.Point(210, 19);
-            this.btn02.Margin = new System.Windows.Forms.Padding(4);
+            this.btn02.Location = new System.Drawing.Point(211, 18);
+            this.btn02.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn02.Name = "btn02";
-            this.btn02.Size = new System.Drawing.Size(90, 70);
+            this.btn02.Size = new System.Drawing.Size(91, 70);
             this.btn02.TabIndex = 5;
             this.btn02.Text = "√";
             this.btn02.Click += new System.EventHandler(this.btnFunction_Clicked);
@@ -905,7 +913,7 @@ namespace Scientific_Calculator
             this.transition.SetDecoration(this.radioButton2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verticalTransition.SetDecoration(this.radioButton2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton2.Location = new System.Drawing.Point(35, 158);
+            this.radioButton2.Location = new System.Drawing.Point(35, 254);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(83, 20);
@@ -922,7 +930,7 @@ namespace Scientific_Calculator
             this.transition.SetDecoration(this.radioButton1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verticalTransition.SetDecoration(this.radioButton1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton1.Location = new System.Drawing.Point(35, 191);
+            this.radioButton1.Location = new System.Drawing.Point(35, 287);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(80, 20);
@@ -939,7 +947,7 @@ namespace Scientific_Calculator
             this.transition.SetDecoration(this.radioButton3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.verticalTransition.SetDecoration(this.radioButton3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.radioButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButton3.Location = new System.Drawing.Point(35, 228);
+            this.radioButton3.Location = new System.Drawing.Point(35, 324);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(81, 20);
@@ -957,9 +965,8 @@ namespace Scientific_Calculator
             this.labelbase2.ForeColor = System.Drawing.Color.Coral;
             this.labelbase2.Location = new System.Drawing.Point(125, 12);
             this.labelbase2.Name = "labelbase2";
-            this.labelbase2.Size = new System.Drawing.Size(44, 16);
+            this.labelbase2.Size = new System.Drawing.Size(0, 16);
             this.labelbase2.TabIndex = 12;
-            this.labelbase2.Text = "label2";
             // 
             // label8
             // 
@@ -969,9 +976,8 @@ namespace Scientific_Calculator
             this.label8.ForeColor = System.Drawing.Color.Coral;
             this.label8.Location = new System.Drawing.Point(124, 42);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 13;
-            this.label8.Text = "label8";
             // 
             // label10
             // 
@@ -981,9 +987,8 @@ namespace Scientific_Calculator
             this.label10.ForeColor = System.Drawing.Color.Coral;
             this.label10.Location = new System.Drawing.Point(124, 70);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.Size = new System.Drawing.Size(0, 16);
             this.label10.TabIndex = 14;
-            this.label10.Text = "label10";
             // 
             // label16
             // 
@@ -993,9 +998,8 @@ namespace Scientific_Calculator
             this.label16.ForeColor = System.Drawing.Color.Coral;
             this.label16.Location = new System.Drawing.Point(124, 98);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 16);
+            this.label16.Size = new System.Drawing.Size(0, 16);
             this.label16.TabIndex = 15;
-            this.label16.Text = "label16";
             // 
             // panelSoft
             // 
@@ -1009,8 +1013,8 @@ namespace Scientific_Calculator
             this.panelSoft.Controls.Add(this.label8);
             this.verticalTransition.SetDecoration(this.panelSoft, Guna.UI2.AnimatorNS.DecorationType.None);
             this.transition.SetDecoration(this.panelSoft, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panelSoft.Location = new System.Drawing.Point(11, 15);
-            this.panelSoft.Margin = new System.Windows.Forms.Padding(4);
+            this.panelSoft.Location = new System.Drawing.Point(11, 111);
+            this.panelSoft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSoft.Name = "panelSoft";
             this.panelSoft.Size = new System.Drawing.Size(185, 137);
             this.panelSoft.TabIndex = 16;
@@ -1067,7 +1071,8 @@ namespace Scientific_Calculator
             // 
             this.verticalTransition.SetDecoration(this.progressBar1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.transition.SetDecoration(this.progressBar1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.progressBar1.Location = new System.Drawing.Point(573, 237);
+            this.progressBar1.Location = new System.Drawing.Point(733, 238);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(75, 15);
             this.progressBar1.TabIndex = 17;
@@ -1079,13 +1084,118 @@ namespace Scientific_Calculator
             this.verticalTransition.SetDecoration(this.buttonHistory, Guna.UI2.AnimatorNS.DecorationType.None);
             this.buttonHistory.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHistory.ForeColor = System.Drawing.Color.Crimson;
-            this.buttonHistory.Location = new System.Drawing.Point(446, 230);
+            this.buttonHistory.Location = new System.Drawing.Point(605, 230);
+            this.buttonHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonHistory.Name = "buttonHistory";
-            this.buttonHistory.Size = new System.Drawing.Size(89, 29);
+            this.buttonHistory.Size = new System.Drawing.Size(89, 30);
             this.buttonHistory.TabIndex = 18;
             this.buttonHistory.Text = "History";
             this.buttonHistory.UseVisualStyleBackColor = true;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rbHexaDecimalBase);
+            this.panel1.Controls.Add(this.rbOctalBase);
+            this.panel1.Controls.Add(this.rbBinaryBase);
+            this.panel1.Controls.Add(this.rbDecimalBase);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label13);
+            this.verticalTransition.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.transition.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel1.Location = new System.Drawing.Point(16, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(451, 87);
+            this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // rbHexaDecimalBase
+            // 
+            this.rbHexaDecimalBase.AutoSize = true;
+            this.transition.SetDecoration(this.rbHexaDecimalBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verticalTransition.SetDecoration(this.rbHexaDecimalBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.rbHexaDecimalBase.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbHexaDecimalBase.Location = new System.Drawing.Point(321, 53);
+            this.rbHexaDecimalBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbHexaDecimalBase.Name = "rbHexaDecimalBase";
+            this.rbHexaDecimalBase.Size = new System.Drawing.Size(110, 20);
+            this.rbHexaDecimalBase.TabIndex = 20;
+            this.rbHexaDecimalBase.TabStop = true;
+            this.rbHexaDecimalBase.Text = "HexaDecimal";
+            this.rbHexaDecimalBase.UseVisualStyleBackColor = true;
+            this.rbHexaDecimalBase.CheckedChanged += new System.EventHandler(this.rbHexaDecimalBase_CheckedChanged);
+            // 
+            // rbOctalBase
+            // 
+            this.rbOctalBase.AutoSize = true;
+            this.transition.SetDecoration(this.rbOctalBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verticalTransition.SetDecoration(this.rbOctalBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.rbOctalBase.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbOctalBase.Location = new System.Drawing.Point(220, 53);
+            this.rbOctalBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbOctalBase.Name = "rbOctalBase";
+            this.rbOctalBase.Size = new System.Drawing.Size(59, 20);
+            this.rbOctalBase.TabIndex = 19;
+            this.rbOctalBase.TabStop = true;
+            this.rbOctalBase.Text = "Octal";
+            this.rbOctalBase.UseVisualStyleBackColor = true;
+            this.rbOctalBase.CheckedChanged += new System.EventHandler(this.rbOctalBase_CheckedChanged);
+            // 
+            // rbBinaryBase
+            // 
+            this.rbBinaryBase.AutoSize = true;
+            this.transition.SetDecoration(this.rbBinaryBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verticalTransition.SetDecoration(this.rbBinaryBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.rbBinaryBase.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbBinaryBase.Location = new System.Drawing.Point(120, 52);
+            this.rbBinaryBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbBinaryBase.Name = "rbBinaryBase";
+            this.rbBinaryBase.Size = new System.Drawing.Size(66, 20);
+            this.rbBinaryBase.TabIndex = 18;
+            this.rbBinaryBase.TabStop = true;
+            this.rbBinaryBase.Text = "Binary";
+            this.rbBinaryBase.UseVisualStyleBackColor = true;
+            this.rbBinaryBase.CheckedChanged += new System.EventHandler(this.rbBinaryBase_CheckedChanged);
+            // 
+            // rbDecimalBase
+            // 
+            this.rbDecimalBase.AutoSize = true;
+            this.transition.SetDecoration(this.rbDecimalBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verticalTransition.SetDecoration(this.rbDecimalBase, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.rbDecimalBase.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbDecimalBase.Location = new System.Drawing.Point(11, 50);
+            this.rbDecimalBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDecimalBase.Name = "rbDecimalBase";
+            this.rbDecimalBase.Size = new System.Drawing.Size(78, 20);
+            this.rbDecimalBase.TabIndex = 17;
+            this.rbDecimalBase.TabStop = true;
+            this.rbDecimalBase.Text = "Decimal";
+            this.rbDecimalBase.UseVisualStyleBackColor = true;
+            this.rbDecimalBase.CheckedChanged += new System.EventHandler(this.rbDecimalBase_CheckedChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.transition.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verticalTransition.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label7.ForeColor = System.Drawing.Color.Coral;
+            this.label7.Location = new System.Drawing.Point(145, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Select Calculation Base : ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.transition.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.verticalTransition.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label13.ForeColor = System.Drawing.Color.Coral;
+            this.label13.Location = new System.Drawing.Point(125, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 16);
+            this.label13.TabIndex = 12;
             // 
             // verticalTransition
             // 
@@ -1113,7 +1223,8 @@ namespace Scientific_Calculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(781, 683);
+            this.ClientSize = new System.Drawing.Size(955, 683);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonHistory);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panelSoft);
@@ -1163,6 +1274,8 @@ namespace Scientific_Calculator
             this.siepanel.ResumeLayout(false);
             this.panelSoft.ResumeLayout(false);
             this.panelSoft.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1239,6 +1352,13 @@ namespace Scientific_Calculator
         private System.Windows.Forms.Label label4;
         private ProgressBar progressBar1;
         private Button buttonHistory;
+        private Panel panel1;
+        private Label label7;
+        private Label label13;
+        private RadioButton rbDecimalBase;
+        private RadioButton rbHexaDecimalBase;
+        private RadioButton rbOctalBase;
+        private RadioButton rbBinaryBase;
     }
 }
 
